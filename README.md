@@ -2,3 +2,5 @@
 
 ## 7. Reverse Integer (leetcode)
 * Java
+* Swift
+
