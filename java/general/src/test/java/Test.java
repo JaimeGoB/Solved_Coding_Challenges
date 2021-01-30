@@ -26,8 +26,14 @@ public class Test {
         assertEquals(solution.reverse(123),321);
     }
 
+    @org.junit.jupiter.api.DisplayName("Code-Signal: adjacentElementsProduct")
+    @org.junit.jupiter.api.Test
+    public void testAdjecentElementsProduct(){
 
+        //the adjecent product is 21
+        int[] inputArray = {3, 6, -2, -5, 7, 3};
 
-
+        assertEquals(solution.adjacentElementsProduct(inputArray),21);
+    }
 
 }

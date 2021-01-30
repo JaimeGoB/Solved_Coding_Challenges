@@ -33,6 +33,24 @@ class Solution {
         
         return result
     }
+    
+    /* *******************************
+     * CodeSignal
+     * find the pair of adjacent elements that has the largest product and return that product.
+     ******************************* */
+    func adjacentElementsProduct(inputArray : Array<Int>) ->Int {
+        
+        //let max be the lowest possible value in range
+        var result:Int = -1000000
+        
+        //iterate through product pairs and store max value between all values in array
+        for i in 0 ..< inputArray.count-1 {
+            let product:Int = inputArray[i] * inputArray[i+1]
+            result = max(result, product)
+        }
+        
+        return result
+    }
 }
 
 var solution:Solution = Solution()
@@ -44,4 +62,6 @@ print(solution.reverse(x: 1534236469))
 print(solution.reverse(x: 123))
 */
 
+let inputArray = [3, 6, -2, -5, 7, 3]
+print(solution.adjacentElementsProduct(inputArray : inputArray))
 

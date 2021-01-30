@@ -76,31 +76,29 @@ class Solution {
 
         return mergedList;
     }
+
+    /* *******************************
+     * CodeSignal
+     * find the pair of adjacent elements that has the largest product and return that product.
+     ******************************* */
+    int adjacentElementsProduct(int[] inputArray) {
+
+        //set max value to lowest min value
+        int result = -1000000;
+        //iterate index plus neighbor to find max product
+        for(int i = 0; i < inputArray.length -1; i++ ){
+            //calculate product of index + right_neighbor
+            int product = inputArray[i] * inputArray[i +1];
+            result = Math.max(result,product);
+        }
+
+        return result;
+    }
 }
 
 public class Main {
 
     public static void main(String[] args) {
-
-        Solution solution = new Solution();
-        /* ****************
-         * Merging two sorted arrays
-         *****************
-        int[] a = new int[]{1,2,3,4};
-        int[] b = new int[]{1,2,2,5};
-        solution.mergeTwoLists(a,b);
-         */
-
-        /* ****************
-         * 7. Reverse Integer (leetcode)
-         *****************
-        int x = 1534236469;
-        int x = 123;
-        System.out.println(solution.reverse(x));
-        */
-
-
-
 
     }
 }

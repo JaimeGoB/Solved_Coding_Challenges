@@ -27,6 +27,23 @@ class Solution {
         return result;
     }
 
+    /* *******************************
+     * CodeSignal
+     * find the pair of adjacent elements that has the largest product and return that product.
+     ******************************* */
+    adjacentElementsProduct(inputArray) {
+        //let max be lowest value in range
+        var result = -1000000;
+
+        //iterate through all product pairs to find highest value
+        for(var i = 0; i < inputArray.length-1; i++ ){
+            let product = inputArray[i] * inputArray[i+1];
+            result = Math.max(result, product);
+        }
+
+        return result;
+    }
+
 }
 
 let solution = new Solution();
@@ -39,5 +56,14 @@ console.log(solution.reverse(num));
 
 var num = -123456;
 console.log(solution.reverse(num));
+*/
+
+/* *******************************
+* CodeSignal
+* find the pair of adjacent elements that 
+* has the largest product and return that product.
+******************************* 
+const inputArray = [3, 6, -2, -5, 7, 3]
+console.log(solution.adjacentElementsProduct(inputArray ));
 */
 
