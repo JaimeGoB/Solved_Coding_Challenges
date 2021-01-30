@@ -14,7 +14,6 @@ Output: -321
 
 #### Solved
 * java
-* swift
 * javascript
 
 ## CodeSignal - adjacentElementsProduct
@@ -28,6 +27,5 @@ adjacentElementsProduct(inputArray) = 21.
 
 #### Solved
 * java
-* swift
 * javascript
 
