@@ -8,22 +8,26 @@ public class Test {
     static void init(){
         solution = new Solution();
     }
+
     /* ****************
-     * 7. Reverse Integer (leetcode)
-     *****************
-    @org.junit.jupiter.api.DisplayName("Overflow test")
+    * 7. Reverse Integer (leetcode)
+    ***************** */
+    @org.junit.jupiter.api.DisplayName("7. Overflow test")
     @org.junit.jupiter.api.Test
     public void test7(){
         //This number will overflow => func will return 0
         assertEquals(solution.reverse(1534236469),0);
     }
-    @org.junit.jupiter.api.DisplayName("Regular test")
+
+    @org.junit.jupiter.api.DisplayName("7. Regular test")
     @org.junit.jupiter.api.Test
     public void test7_0(){
 
         assertEquals(solution.reverse(123),321);
     }
-    */
+
+
+
 
 
 }

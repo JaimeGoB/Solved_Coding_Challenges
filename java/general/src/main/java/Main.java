@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 class Solution {
 
     /****************************
@@ -46,6 +49,33 @@ class Solution {
 
         return result;
     }
+
+    public List<Integer> mergeTwoLists(int[] a, int[] b) {
+
+        List<Integer> mergedList = new ArrayList<>();
+        int left_a = 0;
+        int left_b = 0;
+        int len_a = a.length-1;
+        int len_b = b.length-1;
+
+        while(len_a >= left_a && len_b >= left_b){
+
+            if(a[left_a] >= b[left_b]){
+                mergedList.add(b[left_b]);
+                left_b++;
+                //no bounds left so we add other list last item
+                if(len_b < left_b) mergedList.add(a[left_a]);
+
+            }else{
+                mergedList.add(a[left_a]);
+                left_a++;
+                //no bounds left so we add other list last item
+                if(len_a < left_a) mergedList.add(b[left_b]);
+            }
+        }
+
+        return mergedList;
+    }
 }
 
 public class Main {
@@ -53,6 +83,13 @@ public class Main {
     public static void main(String[] args) {
 
         Solution solution = new Solution();
+        /* ****************
+         * Merging two sorted arrays
+         *****************
+        int[] a = new int[]{1,2,3,4};
+        int[] b = new int[]{1,2,2,5};
+        solution.mergeTwoLists(a,b);
+         */
 
         /* ****************
          * 7. Reverse Integer (leetcode)
@@ -61,6 +98,8 @@ public class Main {
         int x = 123;
         System.out.println(solution.reverse(x));
         */
+
+
 
 
     }
