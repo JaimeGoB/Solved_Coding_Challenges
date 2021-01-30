@@ -27,3 +27,7 @@ adjacentElementsProduct(inputArray) = 21.
 7 and 3 produce the largest product.
 
 #### Solved
+* java
+* swift
+* javascript
+
