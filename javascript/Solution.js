@@ -45,8 +45,7 @@ class Solution {
     }
 
 }
-
-let solution = new Solution();
+module.exports = Solution;
 
 /* ****************
 * 7. Reverse Integer (leetcode)
@@ -62,8 +61,8 @@ console.log(solution.reverse(num));
 * CodeSignal
 * find the pair of adjacent elements that 
 * has the largest product and return that product.
-******************************* 
-const inputArray = [3, 6, -2, -5, 7, 3]
-console.log(solution.adjacentElementsProduct(inputArray ));
-*/
+******************************* */
+//const inputArray = [3, 6, -2, -5, 7, 3]
+//console.log(solution.adjacentElementsProduct(inputArray ));
+
 

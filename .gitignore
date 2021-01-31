@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 node_modules
 node_modules/
 /node_modules
 *node_modules*
-=======
-/node_modules
-*.json
->>>>>>> 53af244af88fc9c0e405c184834a42b3cb3e1f75
