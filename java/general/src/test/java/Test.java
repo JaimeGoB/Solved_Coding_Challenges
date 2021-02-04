@@ -1,3 +1,7 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class Test {
@@ -9,6 +13,18 @@ public class Test {
         solution = new Solution();
     }
 
+    /* ****************
+     * Merged Two Sorted Lists
+     ***************** */
+    @org.junit.jupiter.api.DisplayName("Merge Two Sorted Lists")
+    @org.junit.jupiter.api.Test
+    public void mergeTwoSortedLists(){
+        //This test will make sure you get all values
+        int[] a = {1,3,4,5};
+        int[] b = {2,6,7,8};
+        List<Integer> result = new ArrayList<Integer>(Arrays.asList(1,2,3,4,5,6,7,8));
+        assertEquals(solution.mergeTwoSortedLists(a,b), result);
+    }
     /* ****************
     * 7. Reverse Integer (leetcode)
     ***************** */

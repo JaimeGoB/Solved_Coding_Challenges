@@ -1,5 +1,40 @@
 class Solution {
     constructor(){}
+
+    /* ****************
+     * Merged Two Sorted Lists
+     ***************** */
+    mergedTwoSortedLists(arr1,arr2){
+        let result = [];
+        let iterator1 = 0;
+        let iterator2 = 0;
+
+        //This for loop will make sure to get all values from 1 list
+        while(iterator1 < arr1.length && iterator2 < iterator2.length){
+            //check for smaller value, once found move iterate to next value
+            if(arr1[iterator1] >= arr2[iterator2]){
+                result.push(arr2[iterator2]);
+                iterator2++;
+            }else{
+                result.push(arr1[iterator1]);
+                iterator1++;
+            }
+        }
+
+        /* Finish adding remaining values of leftover list
+        * There could be 1 or more values left on this list. */
+        while(iterator1 < arr1.length){
+            result.push(arr1[iterator1++]);
+        }
+
+        while(iterator2 < arr2.length){
+            result.push(arr2[iterator2++]);
+        }
+
+        
+
+        return result;
+    }
     /* ****************
      * 7. Reverse Integer (leetcode)
      ***************** */
@@ -33,36 +68,16 @@ class Solution {
      ******************************* */
     adjacentElementsProduct(inputArray) {
         //let max be lowest value in range
-        var result = -1000000;
+        let result = -1000000;
 
         //iterate through all product pairs to find highest value
-        for(var i = 0; i < inputArray.length-1; i++ ){
+        for(let i = 0; i < inputArray.length-1; i++ ){
             let product = inputArray[i] * inputArray[i+1];
             result = Math.max(result, product);
         }
-
+        
         return result;
     }
-
 }
+
 module.exports = Solution;
-
-/* ****************
-* 7. Reverse Integer (leetcode)
-***************** 
-var num = 123456;
-console.log(solution.reverse(num));
-
-var num = -123456;
-console.log(solution.reverse(num));
-*/
-
-/* *******************************
-* CodeSignal
-* find the pair of adjacent elements that 
-* has the largest product and return that product.
-******************************* */
-//const inputArray = [3, 6, -2, -5, 7, 3]
-//console.log(solution.adjacentElementsProduct(inputArray ));
-
-

@@ -3,6 +3,43 @@ import java.util.List;
 
 class Solution {
 
+    /* ****************
+     * Merged Two Sorted Lists
+     ***************** */
+    public List<Integer> mergeTwoSortedLists(int[] arr1, int[] arr2) {
+
+        List<Integer> mergedList = new ArrayList<>();
+        int iterator1 = 0;
+        int iterator2 = 0;
+
+        /*This for loop will finish one list but NOT THE OTHER LIST
+         * IF THE OTHER LIST HAS MORE THAN 1 VALUE LEFT.*/
+        while(iterator1 < arr1.length && iterator2 < arr2.length ){
+            //check which value is bigger
+            if(arr1[iterator1] >= arr2[iterator2]){
+                //store value in list
+                mergedList.add(arr2[iterator2]);
+                iterator2++;
+
+            }else{
+                //store value in list
+                mergedList.add(arr1[iterator1]);
+                iterator1++;
+            }
+        }
+
+        //Finish list 1 if not already finished
+        while(iterator1 < arr1.length){
+            mergedList.add(arr1[iterator1++]);
+        }
+
+        //Finish list 2 if not already finished
+        while (iterator2 < arr2.length){
+            mergedList.add(arr2[iterator2++]);
+        }
+
+        return mergedList;
+    }
     /****************************
      * 7. Reverse Integer (leetcode)
      *****************************/
@@ -49,34 +86,6 @@ class Solution {
 
         return result;
     }
-
-    public List<Integer> mergeTwoLists(int[] a, int[] b) {
-
-        List<Integer> mergedList = new ArrayList<>();
-        int left_a = 0;
-        int left_b = 0;
-        int len_a = a.length-1;
-        int len_b = b.length-1;
-
-        while(len_a >= left_a && len_b >= left_b){
-
-            if(a[left_a] >= b[left_b]){
-                mergedList.add(b[left_b]);
-                left_b++;
-                //no bounds left so we add other list last item
-                if(len_b < left_b) mergedList.add(a[left_a]);
-
-            }else{
-                mergedList.add(a[left_a]);
-                left_a++;
-                //no bounds left so we add other list last item
-                if(len_a < left_a) mergedList.add(b[left_b]);
-            }
-        }
-
-        return mergedList;
-    }
-
     /* *******************************
      * CodeSignal
      * find the pair of adjacent elements that has the largest product and return that product.

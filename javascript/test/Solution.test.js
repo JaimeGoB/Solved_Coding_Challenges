@@ -2,6 +2,21 @@ const Solution = require('../Solution');
   
 
 /* ****************
+* Merged Two Sorted Lists
+***************** */
+describe('Merged Two Sorted Lists', () =>{
+    test('Test when one list is DRASTICALLY shorter than the other', () => {
+
+        let solution = new Solution();
+        const a = [1,3,4,5];
+        const b = [2,6,7,8];
+        let result = [1,2,3,4,5,6,7,8];
+
+        expect(solution.mergedTwoSortedLists(a,b)).toEqual(expect.arrayContaining(result));
+    })
+})
+
+/* ****************
 * 7. Reverse Integer (leetcode)
 ***************** */
 describe('Leetcode: 7.reverseInteger', () =>{
