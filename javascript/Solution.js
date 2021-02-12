@@ -78,6 +78,122 @@ class Solution {
         
         return result;
     }
+
+    /* *******************************
+     * Educative
+     * Find Two Numbers that Add up to "n"
+     * return pair of numbers if it exists else return array
+     * O(n)
+     * This is the best method to do this.
+     * We know that n is sum of two numbers
+     * n = n1+n2 <=> n-n1 = n2
+     * As we iterate array arr with (n1)
+     * we check if the difference (n-n1) is contained(=) in n2
+     * if so return it, otherwise add element from array (n1) to n2 set.
+     * We do this to find reciprocal values:
+     * 4-1=3 <=> 4-3=1
+     ******************************* */
+    findSum(arr,n)
+    {
+        //use to store pair if it exists
+        var result = [];
+        // hashtable will be n2
+        // n = n1 + n2 <=> n - n1 = n2
+        var n2 = new Set();
+
+        //Look for n2 from n-n1 where n1 is all values from array
+        for(var i = 0; i < arr.length; i++){
+            let n1 = arr[i];
+            //found a pair that satisfies equation
+            if(n2.has(n-n1)){
+                result = [n-n1, n1];
+                return result;
+            }
+            //add n1 to n2 set to find new values of n1 that satisfy equation
+            n2.add(n1);
+        }
+
+        return arr;
+    }
+
+    /* *******************************
+     * Educative
+     * Find Two Numbers that Add up to "n"
+     * return pair of numbers if it exists else return array
+     * O(n^2)
+     * Brute force method will try every single possible combination.
+     ******************************* */
+    findSum2(arr,n)
+    {
+        //create empty array to hold pair
+        var result = []
+
+        //Brute force check sum of all possible comibaniations
+        for(var i = 0; i < arr.length-1; i++){
+            for(var j = i + 1; j < arr.length; j++){
+                if(n == arr[i] + arr[j]){
+                    result = [arr[i], arr[j]];
+                    return result;
+                }
+            }
+        }
+        return arr;
+    }
+
+    /*
+     * Reverse a String
+     */
+    reverseString(arr)
+    {
+        let reversed_string = [];
+
+        for(var i = arr.length-1; i >= 0; i--){
+            reversed_string.push(arr[i]);
+        }
+
+        return reversed_string;
+    }
+
+    /* *******************************
+     * Educative
+     * Reverse words in a cstring.
+     * Ex: Hello world => world Hello
+     ******************************* */
+    reverseWords(arr)
+    {
+        //variables needed to solve
+        let reversedSentece = [];
+        let end = arr.length;
+
+        //traverse string to get subtrings
+        for(let start = arr.length-1; start >= 0; start--){
+
+            //Case 2: Get Last Substring not ending in space (1st char in cstring)
+            if(start == 0 && arr[start] != ' '){
+                //Iterate from start to end the last substring (1st string in cstring)
+                for(let subString = start; subString < end; subString++){
+                    reversedSentece.push(arr[subString]);
+                }
+                break;
+            }
+
+            //Case 1: Check for spaces and reverse word and space
+            if(arr[start] == ' '){
+                //Iterate through substring from start to end and store into rSentence
+                for(let subStringIndex = start+1; subStringIndex < end; subStringIndex++ ){
+                    reversedSentece.push(arr[subStringIndex]);
+                }
+                //adding space and moving end to new 
+                reversedSentece.push(' ');
+                //move end to the index of space (start is where space is at)
+                end = start;
+            }
+        }
+
+        return reversedSentece;
+    }
 }
 
 module.exports = Solution;
+
+

@@ -1,5 +1,7 @@
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 class Solution {
 
@@ -103,12 +105,124 @@ class Solution {
 
         return result;
     }
+
+    /* *******************************
+     * Educative
+     * Find Two Numbers that Add up to "n"
+     * O(n)
+     * This is the best method to do this.
+     * We know that n is sum of two numbers
+     * n = n1+n2 <=> n-n1 = n2
+     * As we iterate array arr with (n1)
+     * we check if the difference (n-n1) is contained(=) in n2
+     * if so return it, otherwise add element from array (n1) to n2 set.
+     * We do this to find reciprocal values:
+     * 4-1=3 <=> 4-3=1
+     ******************************* */
+    public int[] findSum(int[] arr, int n)
+    {
+        int[] result = new int[2];
+        Set<Integer> n2 = new HashSet<Integer>();
+
+        for (int n1 : arr) {
+            //n-n1 = n2
+            if (n2.contains(n - n1)) {
+                result[0] = n1;
+                result[1] = n - n1;
+                return result;
+            }
+            n2.add(n1);
+        }
+        return arr;
+    }
+
+    /* *******************************
+     * Educative
+     * Find Two Numbers that Add up to "n"
+     * O(n^2)
+     * Brute force method will try every single possible combination.
+     ******************************* */
+    public int[] findSum2(int[] arr, int n)
+    {
+        int[] result = new int[2]; // to store the pair of values.
+
+        for (int i = 0; i < arr.length; i++) { //traverse arr
+            for (int j = i + 1; j < arr.length; j++) { //traverse arr again
+                if (arr[i] + arr[j] == n) { // find where sum is equal to n
+                    result[0] = arr[i];
+                    result[1] = arr[j];
+                    return result; // return the pair of numbers
+                }
+            }
+        }
+        return arr;
+    }
+    /*
+     * Reverse the CString
+     * */
+    public char[] reverseCString (char[] sentence) {
+        //create cstring to store reversed characters
+        char[] reversed_sentence = new char[sentence.length];
+        //iterate through end of array and return
+        //(sentence.length-1) - i WILL GO from 0 to (sentence.length-1)
+        //will i goes from (sentence.length-1) to 0
+        for(int i = sentence.length-1; i >= 0; i--){
+            reversed_sentence[(sentence.length-1) - i] = sentence[i];
+        }
+
+        return reversed_sentence;
+    }
+    /*
+     * Educative
+     * Reverse the order of words in a given sentence (an array of characters (cstring)):
+     * Hello world -> world Hello
+     * */
+    public char[] reverseWords (char[] sentence) {
+        //create cstring to store reversed characters
+        char[] reversed_sentence = new char[sentence.length];
+
+        //variables to get substrings
+        int end = sentence.length;
+        int index = 0;
+
+        //iterate cstring from end to beginning
+        for(int start = sentence.length-1; start >= 0; start--){
+
+            //sentence array does not start with a space
+            if(start == 0 && sentence[start] != ' '){
+                //case the word does not end with ' '
+                for(int substringIndex = start; substringIndex  < end; substringIndex++){
+                    reversed_sentence[index++] = sentence[substringIndex];
+                }
+                break;
+            }
+
+            //check if current char is a space
+            if(sentence[start] == ' '){
+                //add substring to reversed_sentence array
+                for(int substringIndex  = start+1; substringIndex  < end; substringIndex++){
+                    reversed_sentence[index++] = sentence[substringIndex];
+                }
+                //add space to end of word
+                reversed_sentence[index++] = ' ';
+                //update end
+                end = start;
+            }
+        }
+
+        return reversed_sentence;
+    }
+
 }
 
 public class Main {
 
     public static void main(String[] args) {
+        Solution solution = new Solution();
+        char[] arr = new char[]{'H','e','l','l','o',' ', 't','o',' ','w','o','r','l','d'};
+        char[] arr1 = new char[]{'t','o',' '};
 
+        System.out.println(solution.reverseWords(arr));
     }
 }
 

@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class Test {
@@ -51,5 +52,48 @@ public class Test {
 
         assertEquals(solution.adjacentElementsProduct(inputArray),21);
     }
+
+    @org.junit.jupiter.api.DisplayName("Educative: findSum in O(n)")
+    @org.junit.jupiter.api.Test
+    public void findSumTest(){
+
+        //result = [21,6] or [6,21]
+        int[] result = new int[]{6,21};
+        int[] arr = {1,21,3,14,5,60,7,6};
+
+        assertArrayEquals(solution.findSum(arr,27) ,result);
+    }
+
+    @org.junit.jupiter.api.DisplayName("Educative: findSum in O(n^2)")
+    @org.junit.jupiter.api.Test
+    public void findSum2Test(){
+
+        //result = [21,6] or [6,21]
+        int[] result = new int[]{21,6};
+        int[] arr = {1,21,3,14,5,60,7,6};
+
+        assertArrayEquals(solution.findSum2(arr,27) ,result);
+    }
+
+    @org.junit.jupiter.api.DisplayName("N/A: Reverse a CString")
+    @org.junit.jupiter.api.Test
+    public void reverseCStringTest(){
+
+        char[] arr = new char[]{'H','e','l','l','o',' ','w','o','r','l','d'};
+        char[] result = new char[]{'d','l','r','o','w',' ','o','l','l','e','H'};
+
+        assertArrayEquals(solution.reverseCString(arr) ,result);
+    }
+
+    @org.junit.jupiter.api.DisplayName("Educative: Reverse words in a string")
+    @org.junit.jupiter.api.Test
+    public void reverseWordsTest(){
+
+        char[] arr = new char[]{'H','e','l','l','o',' ','w','o','r','l','d'};
+        char[] result = new char[]{'w','o','r','l','d',' ','H','e','l','l','o'};
+
+        assertArrayEquals(solution.reverseWords(arr) ,result);
+    }
+
 
 }

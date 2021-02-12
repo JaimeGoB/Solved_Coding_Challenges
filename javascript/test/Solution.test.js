@@ -47,3 +47,61 @@ describe('CodeSignal: adjecementElementsProduct', () =>{
     })
 })
 
+/* *******************************
+* Educative
+* Find Two Numbers that Add up to "n"
+* return pair of numbers if it exists else return array
+* O(n^2)
+* Brute force method will try every single possible combination.
+******************************* */
+describe('Educative: find two numbers that Add up to "n" ', () =>{
+    test('Test to make sure Brute Force Method works', () =>{
+        let solution = new Solution();
+        const inputArray = [1,21,3,14,5,60,7,6]
+        const n = 27;
+        expect(solution.findSum2(inputArray, n) ).toEqual([21,6]);
+    })
+})
+
+/* *******************************
+* Educative
+* Find Two Numbers that Add up to "n"
+* return pair of numbers if it exists else return array
+* O(n)
+* This is the best method to do this.
+* We know that n is sum of two numbers
+* n = n1+n2 <=> n-n1 = n2
+* As we iterate array arr with (n1)
+* we check if the difference (n-n1) is contained(=) in n2
+* if so return it, otherwise add element from array (n1) to n2 set.
+* We do this to find reciprocal values:
+* 4-1=3 <=> 4-3=1
+******************************* */
+describe('Educative: find two numbers that Add up to "n" ', () =>{
+    test('Test to make sure Brute Force Method works', () =>{
+        let solution = new Solution();
+        const inputArray = [1,21,3,14,5,60,7,6]
+        const n = 27;
+        expect(solution.findSum(inputArray, n) ).toEqual([21,6]);
+    })
+})
+
+describe('General Test - Reverse a string', () =>{
+    test('Reverse a CString.', () =>{
+        let solution = new Solution();
+        let arr = ['H','e','l','l','o',' ','w','o','r','l','d'];
+        let result = ['d','l','r','o','w',' ','o','l','l','e','H'];
+
+        expect(solution.reverseString(arr) ).toEqual(result);
+    })
+})
+
+describe('Educative - Reverse words in a string', () =>{
+    test('Reverse words given a cstring.', () =>{
+        let solution = new Solution();
+        let arr =    ['H','e','l','l','o',' ','w','o','r','l','d'];
+        let result = ['w','o','r','l','d',' ','H','e','l','l','o'];
+
+        expect(solution.reverseWords(arr)).toEqual(result);
+    })
+})
