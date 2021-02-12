@@ -45,3 +45,37 @@ adjacentElementsProduct(inputArray) = 21.
 * java
 * javascript
 
+## Educative - Find Two Numbers that Add up to "n"
+
+There are three solutions to this problems:
+- Brute Force O(n)
+- Sort Array and use while to to iterate start and end until n is found.
+- Use hashtable. Since n = n1 + n2 <=> n - n1 = n2
+
+**Example**
+
+For inputArray = [1,21,3,14,5,60,7,6], and n = 27 the output should be
+findSum(inputArray) = [21,6].
+
+21 + 6 = n or 27
+
+#### Solved
+* java
+* javascript
+
+## Educative - Reverse words in a string
+
+**Example**
+
+Reverse the order of words in a given sentence (an array of characters (cstring)) and return a cstring:
+
+Hello world -> world Hello
+
+#### Solved
+* java
+* javascript
+
+
+
+
+
