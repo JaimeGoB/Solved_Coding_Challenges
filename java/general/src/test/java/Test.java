@@ -94,6 +94,14 @@ public class Test {
 
         assertArrayEquals(solution.reverseWords(arr) ,result);
     }
+    @org.junit.jupiter.api.DisplayName("Educative: Reverse words in a string. More than 2 words.")
+    @org.junit.jupiter.api.Test
+    public void reverseWordsTestMoreThanTwoWords(){
 
+        char[] arr    = new char[]{'H','e','l','l','o',' ','t','o', ' ','w','o','r','l','d'};
+        char[] result = new char[]{'w','o','r','l','d',' ','t','o', ' ','H','e','l','l','o'};
+
+        assertArrayEquals(solution.reverseWords(arr) ,result);
+    }
 
 }

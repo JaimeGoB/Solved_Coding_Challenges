@@ -218,11 +218,7 @@ class Solution {
 public class Main {
 
     public static void main(String[] args) {
-        Solution solution = new Solution();
-        char[] arr = new char[]{'H','e','l','l','o',' ', 't','o',' ','w','o','r','l','d'};
-        char[] arr1 = new char[]{'t','o',' '};
-
-        System.out.println(solution.reverseWords(arr));
+        
     }
 }
 
