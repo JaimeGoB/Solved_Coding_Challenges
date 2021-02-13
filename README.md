@@ -75,6 +75,19 @@ Hello world -> world Hello
 * java
 * javascript
 
+## General Fibonacci
+
+**Example**
+
+Fibonnaci Sequence
+
+F(n) = F(n-1) + F(n-2)
+
+**Run Time Complexity ** = 2^n (exponential)
+
+#### Solved
+* java
+* javascript
 
 
 
