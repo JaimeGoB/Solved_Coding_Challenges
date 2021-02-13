@@ -137,11 +137,11 @@ describe('Educative Recursion - isPrime return true if so', () =>{
     test('Testing a prime number', () =>{
         
         let solution = new Solution();
-        expect(solution.isPrime(5,5/2)).toEqual(true);
+        expect(solution.isPrime(5,5/2)).toBeTruthy();
     })
     test('Testing a composite number', () =>{
         
         let solution = new Solution();
-        expect(solution.isPrime(4,4/2)).toEqual(false);
+        expect(solution.isPrime(4,4/2)).toBeFalsy();
     })
 })

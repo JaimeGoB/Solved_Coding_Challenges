@@ -224,7 +224,21 @@ class Solution {
      * Prime numbers: 2,3,5,7,11,13,17,19,23,29
      * Only divisble by n and 1.
      */
-    
+    isPrime(n,n_div_2)
+    {
+        //round number down to an int
+        n_div_2 = Math.floor(n_div_2);
+
+        //check number is divisible by n_div_2 and n_div_2 is not 1
+        if(n % n_div_2 == 0 && n_div_2 != 1)
+            return false;
+        //go from (n/2) to 2 in decreasing order
+        if(n_div_2 > 1)
+            return this.isPrime(n,--n_div_2);
+
+        //number is prime
+        return true;
+    }
     
 }
 

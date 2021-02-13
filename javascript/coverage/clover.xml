@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1613254050800" clover="3.2.0">
-  <project timestamp="1613254050800" name="All files">
-    <metrics statements="73" coveredstatements="66" conditionals="24" coveredconditionals="21" methods="10" coveredmethods="10" elements="107" coveredelements="97" complexity="0" loc="73" ncloc="73" packages="1" files="1" classes="1"/>
+<coverage generated="1613260738000" clover="3.2.0">
+  <project timestamp="1613260738000" name="All files">
+    <metrics statements="81" coveredstatements="74" conditionals="30" coveredconditionals="27" methods="11" coveredmethods="11" elements="122" coveredelements="112" complexity="0" loc="81" ncloc="81" packages="1" files="1" classes="1"/>
     <file name="Solution.js" path="/Users/jaime/Documents/interviews/coding_problems_solved/javascript/Solution.js">
-      <metrics statements="73" coveredstatements="66" conditionals="24" coveredconditionals="21" methods="10" coveredmethods="10"/>
+      <metrics statements="81" coveredstatements="74" conditionals="30" coveredconditionals="27" methods="11" coveredmethods="11"/>
       <line num="8" count="1" type="stmt"/>
       <line num="9" count="1" type="stmt"/>
       <line num="10" count="1" type="stmt"/>
@@ -73,10 +73,18 @@
       <line num="202" count="24" type="cond" truecount="2" falsecount="0"/>
       <line num="203" count="10" type="stmt"/>
       <line num="205" count="14" type="stmt"/>
-      <line num="210" count="8" type="cond" truecount="2" falsecount="0"/>
-      <line num="211" count="2" type="stmt"/>
-      <line num="213" count="6" type="stmt"/>
-      <line num="217" count="1" type="stmt"/>
+      <line num="215" count="8" type="cond" truecount="2" falsecount="0"/>
+      <line num="216" count="2" type="stmt"/>
+      <line num="218" count="6" type="stmt"/>
+      <line num="230" count="5" type="stmt"/>
+      <line num="233" count="5" type="cond" truecount="4" falsecount="0"/>
+      <line num="234" count="1" type="stmt"/>
+      <line num="236" count="4" type="cond" truecount="2" falsecount="0"/>
+      <line num="237" count="2" type="stmt"/>
+      <line num="240" count="2" type="stmt"/>
+      <line num="245" count="1" type="stmt"/>
+      <line num="247" count="1" type="stmt"/>
+      <line num="249" count="1" type="stmt"/>
     </file>
   </project>
 </coverage>
