@@ -89,6 +89,20 @@ F(n) = F(n-1) + F(n-2)
 * java
 * javascript
 
+
+## Educative Recursion - Find Greatest Common Divisor
+
+**Example**
+
+GCD of 36 and 54 is 18.
+GCD of 9 and 6 is 3.
+
+**Run Time Complexity** = log(n)
+
+#### Solved
+* java
+* javascript
+
 ## Educative Recursion - isPrime
 
 Check if a number is prime. Return true if so.
