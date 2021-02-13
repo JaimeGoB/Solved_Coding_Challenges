@@ -111,4 +111,11 @@ public class Test {
         assertEquals(solution.gcd(54,72) , 18);
     }
 
+    @org.junit.jupiter.api.DisplayName("Recursion Challenge 1: Find the Greatest Common Divisor - NO GCD or GCD = 1")
+    @org.junit.jupiter.api.Test
+    public void gcdTestNoGCD(){
+        //gcd(54, 72) => 18
+        assertEquals(solution.gcd(5,3) , 1);
+    }
+
 }
