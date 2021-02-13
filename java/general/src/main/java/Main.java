@@ -213,12 +213,27 @@ class Solution {
         return reversed_sentence;
     }
 
+    //Remember Fibonacci sequence:
+    // F = F(n-1) + F(n-2)
+    public int fibonacci(int n) {
+        //If negatives are allowed use <= 0
+        if(n == 0)
+            return 0;
+        if(n == 1)
+            return 1;
+
+        return fibonacci(n-1)+fibonacci(n-2);
+    }
 }
 
 public class Main {
 
     public static void main(String[] args) {
-        
+
+        Solution solution = new Solution();
+        int five = 5;
+
+        System.out.println(solution.fibonacci(five));
     }
 }
 

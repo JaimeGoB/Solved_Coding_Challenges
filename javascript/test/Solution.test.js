@@ -105,3 +105,16 @@ describe('Educative - Reverse words in a string', () =>{
         expect(solution.reverseWords(arr)).toEqual(result);
     })
 })
+
+describe('General - Fibonacci', () =>{
+    test('5 gets 5 ', () =>{
+        
+        let solution = new Solution();
+        expect(solution.fibonacci(5)).toEqual(5);
+    })
+    test('12 gets 144 ', () =>{
+
+        let solution = new Solution();
+        expect(solution.fibonacci(5)).toEqual(5);
+    })
+})
