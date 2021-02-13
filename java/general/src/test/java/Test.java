@@ -104,4 +104,11 @@ public class Test {
         assertArrayEquals(solution.reverseWords(arr) ,result);
     }
 
+    @org.junit.jupiter.api.DisplayName("Recursion Challenge 1: Find the Greatest Common Divisor")
+    @org.junit.jupiter.api.Test
+    public void gcdTest(){
+        //gcd(54, 72) => 18
+        assertEquals(solution.gcd(54,72) , 18);
+    }
+
 }

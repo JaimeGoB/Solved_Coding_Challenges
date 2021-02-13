@@ -237,7 +237,6 @@ class Solution {
         //recursive case
         return gcd(b, a % b);
     }
-
 }
 
 public class Main {
