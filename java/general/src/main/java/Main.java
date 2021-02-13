@@ -224,6 +224,20 @@ class Solution {
 
         return fibonacci(n-1)+fibonacci(n-2);
     }
+    /*
+    * Recursion Challenge 1: Find the Greatest Common Divisor
+    * Given an input of two ints find their gcd
+    * Ex: gcd(18, 24) => 6 , gcd(54, 72) => 18
+    */
+    public int gcd(int a, int b)
+    {
+        //base case
+        if(b == 0)
+            return a;
+        //recursive case
+        return gcd(b, a % b);
+    }
+
 }
 
 public class Main {
