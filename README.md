@@ -83,7 +83,7 @@ Fibonnaci Sequence
 
 F(n) = F(n-1) + F(n-2)
 
-**Run Time Complexity ** = 2^n (exponential)
+**Run Time Complexity** = 2^n (exponential)
 
 #### Solved
 * java
