@@ -121,9 +121,14 @@ describe('General - Fibonacci', () =>{
 
 
 describe('Educative Recursion - Find Greatest Common Divisor', () =>{
-    test('5 gets 5 ', () =>{
+    test('Getting a GCD ', () =>{
         
         let solution = new Solution();
-        expect(solution.gcd(9,6)).toEqual(3);
+        expect(solution.gcd(54,72)).toEqual(18);
+    })
+    test('NO GCD or GCD is 1 ', () =>{
+        
+        let solution = new Solution();
+        expect(solution.gcd(5,3)).toEqual(1);
     })
 })
