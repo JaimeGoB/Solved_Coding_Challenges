@@ -204,6 +204,14 @@ class Solution {
         
         return (this.fibonacci(n-1) + this.fibonacci(n-2));
     }
+
+    gcd(a,b)
+    {
+        if(b == 0)
+            return 0;
+        
+        return this.gcd(b, a % b);
+    }
 }
 
 module.exports = Solution;
