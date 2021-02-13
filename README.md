@@ -89,6 +89,22 @@ F(n) = F(n-1) + F(n-2)
 * java
 * javascript
 
+## Educative Recursion - isPrime
+
+Check if a number is prime. Return true if so.
+
+**Example**
+
+Prime numbers: 2,3,5,7,11,13,17,19,23,29
+
+Only divisble by n and 1.
+
+**Run Time Complexity** = sqrt(n)
+
+#### Solved
+* java
+* javascript
+
 
 
 
