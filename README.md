@@ -105,7 +105,10 @@ GCD of 9 and 6 is 3.
 
 ## Educative Recursion - isPrime
 
-Check if a number is prime. Return true if so.
+Recursion Challenge 2: Is a number prime
+     * Given an input of two ints  n and n/2 , using recursion check if number is prime.
+     * Ex: gcd(18, 24) => 6 , gcd(54, 72) => 18
+     * Return true if number is prime.
 
 **Example**
 
