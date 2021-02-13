@@ -2,8 +2,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertArrayEquals;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class Test {
 
@@ -117,5 +116,5 @@ public class Test {
         //gcd(54, 72) => 18
         assertEquals(solution.gcd(5,3) , 1);
     }
-
+    
 }

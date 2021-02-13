@@ -237,6 +237,25 @@ class Solution {
         //recursive case
         return gcd(b, a % b);
     }
+
+    /*
+     * Recursion Challenge 2: Is a number prime
+     * Given an input of two ints  n and n/2 , using recursion check if number is prime.
+     * Prime numbers: 2,3,5,7,11,13,17,19,23,29
+     * Only divisble by n and 1.
+     */
+    public boolean isPrime(int n, int n_div_2) {
+
+        //check the number is divisible by n_div_2 and n_div_2 IS NOT 1 => Composite #
+        if(n % n_div_2 == 0 && n_div_2 != 1)
+            return false;
+        //go from (n/2) to 2 in decreasing form
+        if(n_div_2 > 1)
+            return isPrime(n, --n_div_2);
+
+        //the number is prime
+        return true;
+    }
 }
 
 public class Main {

@@ -205,6 +205,11 @@ class Solution {
         return (this.fibonacci(n-1) + this.fibonacci(n-2));
     }
 
+    /*
+    * Recursion Challenge 1: Find the Greatest Common Divisor
+    * Given an input of two ints find their gcd
+    * Ex: gcd(18, 24) => 6 , gcd(54, 72) => 18
+    */
     gcd(a,b)
     {
         if(b == 0)
@@ -212,6 +217,15 @@ class Solution {
         
         return this.gcd(b, a % b);
     }
+
+    /*
+     * Recursion Challenge 2: Is a number prime
+     * Given an input of two ints  n and n/2 , using recursion check if number is prime.
+     * Prime numbers: 2,3,5,7,11,13,17,19,23,29
+     * Only divisble by n and 1.
+     */
+    
+    
 }
 
 module.exports = Solution;

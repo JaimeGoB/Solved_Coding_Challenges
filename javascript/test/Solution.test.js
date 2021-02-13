@@ -132,3 +132,16 @@ describe('Educative Recursion - Find Greatest Common Divisor', () =>{
         expect(solution.gcd(5,3)).toEqual(1);
     })
 })
+
+describe('Educative Recursion - isPrime return true if so', () =>{
+    test('Testing a prime number', () =>{
+        
+        let solution = new Solution();
+        expect(solution.isPrime(5,5/2)).toEqual(true);
+    })
+    test('Testing a composite number', () =>{
+        
+        let solution = new Solution();
+        expect(solution.isPrime(4,4/2)).toEqual(false);
+    })
+})
