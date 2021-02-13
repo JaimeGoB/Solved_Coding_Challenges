@@ -75,7 +75,7 @@ Hello world -> world Hello
 * java
 * javascript
 
-## General Fibonacci
+## General - Fibonacci
 
 **Example**
 
