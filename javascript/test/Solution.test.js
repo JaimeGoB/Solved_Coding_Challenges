@@ -108,7 +108,7 @@ describe('Educative - Reverse words in a string', () =>{
 
 describe('General - Fibonacci', () =>{
     test('5 gets 5 ', () =>{
-        
+
         let solution = new Solution();
         expect(solution.fibonacci(5)).toEqual(5);
     })
@@ -116,5 +116,14 @@ describe('General - Fibonacci', () =>{
 
         let solution = new Solution();
         expect(solution.fibonacci(5)).toEqual(5);
+    })
+})
+
+
+describe('Educative Recursion - Find Greatest Common Divisor', () =>{
+    test('5 gets 5 ', () =>{
+        
+        let solution = new Solution();
+        expect(solution.gcd(9,6)).toEqual(3);
     })
 })

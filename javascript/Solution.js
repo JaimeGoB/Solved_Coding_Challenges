@@ -208,7 +208,7 @@ class Solution {
     gcd(a,b)
     {
         if(b == 0)
-            return 0;
+            return a;
         
         return this.gcd(b, a % b);
     }
