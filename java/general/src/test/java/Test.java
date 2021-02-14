@@ -1,3 +1,5 @@
+import stack.Stack;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -128,7 +130,7 @@ public class Test {
         assertFalse(solution.isPrime(6, 6 / 2));
     }
 
-    @org.junit.jupiter.api.DisplayName("Stack Class - pop method")
+    @org.junit.jupiter.api.DisplayName("stack.Stack Class - pop method")
     @org.junit.jupiter.api.Test
     public void stackTestPop() throws Exception {
         Stack<Integer> stack = new Stack<Integer>();
@@ -141,7 +143,7 @@ public class Test {
 
         assertEquals(stack.peek(),4);
     }
-    @org.junit.jupiter.api.DisplayName("Stack Class - peek method")
+    @org.junit.jupiter.api.DisplayName("stack.Stack Class - peek method")
     @org.junit.jupiter.api.Test
     public void stackTestPeek() throws Exception {
         Stack<Integer> stack = new Stack<Integer>();
@@ -151,7 +153,7 @@ public class Test {
 
         assertEquals(stack.peek(),16);
     }
-    @org.junit.jupiter.api.DisplayName("Stack Class - isEmpty method")
+    @org.junit.jupiter.api.DisplayName("stack.Stack Class - isEmpty method")
     @org.junit.jupiter.api.Test
     public void stackTestIsEmpty(){
         Stack<Integer> stack = new Stack<Integer>();

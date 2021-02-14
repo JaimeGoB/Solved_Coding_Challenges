@@ -1,4 +1,6 @@
-// Create Stack Using Linked list
+package stack;
+
+// Create stack.Stack Using Linked list
 public class Stack<Type> {
 
     // A linked list node
@@ -12,7 +14,7 @@ public class Stack<Type> {
     Node top;
 
     // Constructor
-    Stack()
+    public Stack()
     {
         this.top = null;
     }
