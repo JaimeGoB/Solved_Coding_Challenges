@@ -1,3 +1,5 @@
+import org.junit.jupiter.api.DisplayName;
+import queue.Queue;
 import stack.Stack;
 
 import java.util.ArrayList;
@@ -162,5 +164,16 @@ public class Test {
         stack.push(16);
 
         assertFalse(stack.isEmpty());
+    }
+
+    @DisplayName("Queue Class - isEmpty method")
+    @org.junit.jupiter.api.Test
+    public void queueTestIsEmpty(){
+        Queue<Integer> queue = new Queue<Integer>();
+        queue.enqueue(2);
+        queue.enqueue(4);
+        queue.enqueue(16);
+
+        assertFalse(queue.isEmpty());
     }
 }
