@@ -143,13 +143,13 @@ public class Test {
     }
     @org.junit.jupiter.api.DisplayName("Stack Class - peek method")
     @org.junit.jupiter.api.Test
-    public void stackTestPeek(){
+    public void stackTestPeek() throws Exception {
         Stack<Integer> stack = new Stack<Integer>();
         stack.push(2);
         stack.push(4);
         stack.push(16);
 
-
+        assertEquals(stack.peek(),16);
     }
     @org.junit.jupiter.api.DisplayName("Stack Class - push method")
     @org.junit.jupiter.api.Test
