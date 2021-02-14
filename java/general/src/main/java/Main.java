@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 class Solution {
 
@@ -260,7 +257,16 @@ class Solution {
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
+        Stack<Integer> stack = new Stack<Integer>();
+        stack.push(2);
+        stack.push(4);
+        stack.push(16);
+
+        while(!stack.isEmpty())
+            System.out.println(stack.pop());
+
+
 
     }
 }

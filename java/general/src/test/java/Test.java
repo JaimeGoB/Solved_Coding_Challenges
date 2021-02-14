@@ -116,7 +116,7 @@ public class Test {
         //gcd(54, 72) => 18
         assertEquals(solution.gcd(5,3) , 1);
     }
-    
+
     @org.junit.jupiter.api.DisplayName("Recursion Challenge 2: Is a number prime - prime number")
     @org.junit.jupiter.api.Test
     public void isPrimeTestPrimeNumber(){
