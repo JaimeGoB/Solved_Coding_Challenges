@@ -151,16 +151,6 @@ public class Test {
 
         assertEquals(stack.peek(),16);
     }
-    @org.junit.jupiter.api.DisplayName("Stack Class - push method")
-    @org.junit.jupiter.api.Test
-    public void stackTestPush(){
-        Stack<Integer> stack = new Stack<Integer>();
-        stack.push(2);
-        stack.push(4);
-        stack.push(16);
-
-
-    }
     @org.junit.jupiter.api.DisplayName("Stack Class - isEmpty method")
     @org.junit.jupiter.api.Test
     public void stackTestIsEmpty(){
@@ -169,6 +159,6 @@ public class Test {
         stack.push(4);
         stack.push(16);
 
-
+        assertFalse(stack.isEmpty());
     }
 }
