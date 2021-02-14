@@ -257,16 +257,7 @@ class Solution {
 
 public class Main {
 
-    public static void main(String[] args) throws Exception {
-        Stack<Integer> stack = new Stack<Integer>();
-        stack.push(2);
-        stack.push(4);
-        stack.push(16);
-
-        while(!stack.isEmpty())
-            System.out.println(stack.pop());
-
-
+    public static void main(String[] args) {
 
     }
 }

@@ -127,4 +127,48 @@ public class Test {
     public void isPrimeTestCompositeNumber(){
         assertFalse(solution.isPrime(6, 6 / 2));
     }
+
+    @org.junit.jupiter.api.DisplayName("Stack Class - pop method")
+    @org.junit.jupiter.api.Test
+    public void stackTestPop() throws Exception {
+        Stack<Integer> stack = new Stack<Integer>();
+        stack.push(2);
+        stack.push(4);
+        stack.push(16);
+
+        //delete 16, peek => 4
+        stack.pop();
+
+        assertEquals(stack.peek(),4);
+    }
+    @org.junit.jupiter.api.DisplayName("Stack Class - peek method")
+    @org.junit.jupiter.api.Test
+    public void stackTestPeek(){
+        Stack<Integer> stack = new Stack<Integer>();
+        stack.push(2);
+        stack.push(4);
+        stack.push(16);
+
+
+    }
+    @org.junit.jupiter.api.DisplayName("Stack Class - push method")
+    @org.junit.jupiter.api.Test
+    public void stackTestPush(){
+        Stack<Integer> stack = new Stack<Integer>();
+        stack.push(2);
+        stack.push(4);
+        stack.push(16);
+
+
+    }
+    @org.junit.jupiter.api.DisplayName("Stack Class - isEmpty method")
+    @org.junit.jupiter.api.Test
+    public void stackTestIsEmpty(){
+        Stack<Integer> stack = new Stack<Integer>();
+        stack.push(2);
+        stack.push(4);
+        stack.push(16);
+
+
+    }
 }
