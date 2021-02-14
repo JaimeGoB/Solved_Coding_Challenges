@@ -176,4 +176,15 @@ public class Test {
 
         assertFalse(queue.isEmpty());
     }
+
+    @DisplayName("Queue Class - dequeue method")
+    @org.junit.jupiter.api.Test
+    public void queueTestDequeue() throws Exception {
+        Queue<Integer> queue = new Queue<Integer>();
+        queue.enqueue(2);
+        queue.enqueue(4);
+        queue.enqueue(16);
+
+        assertEquals(queue.dequeue(), 2);
+    }
 }
