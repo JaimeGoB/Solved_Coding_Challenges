@@ -240,6 +240,20 @@ class Solution {
         return true;
     }
     
+    twoSum(nums,target)
+    {
+        let result = [];
+        let hashMap = new Map();
+
+        for(let i = 0; i < nums.length; i++){
+            if(hashMap.has(target - nums[i])){
+                return result = [ hashMap.get(target - nums[i]), i];
+            }
+            hashMap.set(nums[i], i);
+        }
+
+        return result;
+    }
 }
 
 module.exports = Solution;

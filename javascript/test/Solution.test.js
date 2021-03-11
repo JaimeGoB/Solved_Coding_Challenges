@@ -145,3 +145,26 @@ describe('Educative Recursion - isPrime return true if so', () =>{
         expect(solution.isPrime(4,4/2)).toBeFalsy();
     })
 })
+
+describe('TwoSum - Leetcode', () =>{
+    test('Test 1 - General Case', () =>{
+        
+        let solution = new Solution();
+        const nums = [2,7,11,15];
+        const target = 9;
+        let result = [0,1];
+
+        expect(solution.twoSum(nums,target)).toEqual(result);
+    })
+
+    test('Test 2 - When one index is the last value', () =>{
+        
+        let solution = new Solution();
+        const nums = [3,2,4];
+        const target = 6;
+        let result = [1,2];
+
+        expect(solution.twoSum(nums,target)).toEqual(result);
+    })
+
+})
