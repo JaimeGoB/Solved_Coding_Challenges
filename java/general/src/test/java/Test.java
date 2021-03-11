@@ -208,4 +208,14 @@ public class Test {
 
         assertArrayEquals(result, solution.twoSum(nums, target));
     }
+
+    @DisplayName("Two Sum - Case 2")
+    @org.junit.jupiter.api.Test
+    public void twoSum2() throws Exception {
+        int[] nums = new int[]{3,2,4};
+        int target = 6;
+        int[] result = new int[]{1,2};
+
+        assertArrayEquals(result, solution.twoSum(nums, target));
+    }
 }
