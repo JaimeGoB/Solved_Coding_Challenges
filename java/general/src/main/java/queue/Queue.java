@@ -43,4 +43,11 @@ public class Queue<Type> {
             oldRear.next = rear;
         }
     }
+
+    public Type top() throws Exception {
+        if(front == null)
+            throw new Exception();
+
+        return front.data;
+    }
 }

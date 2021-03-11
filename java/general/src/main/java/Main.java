@@ -253,6 +253,36 @@ class Solution {
         //the number is prime
         return true;
     }
+
+    /*
+    * Given an array of integers nums and an integer target,
+    * return indices of the two numbers such that they add up to target
+    * (You may assume that each input would have exactly one solution,
+    *  and you may not use the same element twice.)
+    * Input: nums = [2,7,11,15], target = 9 Output:
+    * Input: nums = [3,2,4],     target = 6 Output: [1,2]
+    * */
+    public int[] twoSum(int[] nums, int target) {
+
+        //array to store indexes
+        int[] result = new int[2];
+        //hashset to find difference of target and index
+        HashMap<Integer, Integer> hashMap = new HashMap<>();
+
+        //iterate through entire array to find sum
+        for (int i = 0; i < nums.length; i++) {
+            //check difference is contained in hashset
+            if (hashMap.containsKey(target-nums[i])) {
+                result[0] = hashMap.get(target-nums[i]);
+                result[1] = i;
+                return result;
+            }
+            //add current element to hashset, so we can look it up using difference
+            hashMap.put(nums[i],i);
+        }
+
+        return result;
+    }
 }
 
 public class Main {

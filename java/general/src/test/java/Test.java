@@ -187,4 +187,25 @@ public class Test {
 
         assertEquals(queue.dequeue(), 2);
     }
+
+    @DisplayName("Queue Class - top method")
+    @org.junit.jupiter.api.Test
+    public void queueTestTop() throws Exception {
+        Queue<Integer> queue = new Queue<Integer>();
+        queue.enqueue(2);
+        queue.enqueue(4);
+        queue.enqueue(16);
+
+        assertEquals(queue.top(), 2);
+    }
+
+    @DisplayName("Two Sum - Case 1")
+    @org.junit.jupiter.api.Test
+    public void twoSum1() throws Exception {
+        int[] nums = new int[]{2,11,7,15};
+        int target = 9;
+        int[] result = new int[]{0,2};
+
+        assertArrayEquals(result, solution.twoSum(nums, target));
+    }
 }
