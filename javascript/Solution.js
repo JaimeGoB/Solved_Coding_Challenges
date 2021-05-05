@@ -269,6 +269,16 @@ class Solution {
 
         return ++result;
     }
+
+    Best_Time_to_Buy_and_Sell_Stock_II(nums)
+    {
+        let profit = 0;
+        //Buy and Sell immediately ONLY if the price goes up
+        for(let i = 1; i < nums.length; i++)
+            profit = profit + Math.max(0,nums[i] - nums[i-1]);
+
+        return profit;
+    }
 }
 
 module.exports = Solution;

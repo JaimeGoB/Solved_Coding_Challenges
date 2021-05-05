@@ -188,6 +188,24 @@ describe('Leetcode Easy Collection - Remove Duplicates from Sorted Array', () =>
 
         expect(solution.Remove_Duplicates_from_Sorted_Array(nums)).toEqual(result);
     })
-
 })
 
+describe('Leetcode Easy Collection - Best Time to Buy and Sell Stock II', () =>{
+    test('Test 1', () =>{
+        
+        let solution = new Solution();
+        const nums = [7,1,5,3,6,4];
+        const result = 7;
+
+        expect(solution.Best_Time_to_Buy_and_Sell_Stock_II(nums)).toEqual(result);
+    })
+
+    test('Test 2', () =>{
+        
+        let solution = new Solution();
+        const nums = [1,2,3,4,5];
+        const result = 4;
+
+        expect(solution.Best_Time_to_Buy_and_Sell_Stock_II(nums)).toEqual(result);
+    })
+})
