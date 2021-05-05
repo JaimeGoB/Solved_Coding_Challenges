@@ -284,6 +284,124 @@ class Solution {
 
         return result;
     }
+
+    public boolean isPalindrome(String s)
+    {
+        //Step 1: remove non-alpha chars
+        String s1 = s.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
+        int left = 0;
+        int right = s1.length()-1;
+
+        while(left < right){
+
+            if(s1.charAt(left) != s1.charAt(right))
+                return false;
+            //update variables
+            left++;
+            right--;
+        }
+
+        return true;
+    }
+
+    public int Remove_Duplicates_from_Sorted_Array(int[] nums)
+    {
+       if(nums.length == 0)
+           return 0;
+
+       int length = 0;
+       for(int current = length+1; current < nums.length; current++){
+           if(nums[length] != nums[current])
+               nums[++length] = nums[current];
+       }
+
+       return ++length;
+    }
+
+    public int Best_Time_to_Buy_and_Sell_Stock_II(int[] prices) {
+        int profit = 0;
+
+        //buy and sell immediatly approach
+        for(int i = 1; i < prices.length; i++)
+            profit += Math.max(0, prices[i] - prices[i-1]);
+
+        return profit;
+    }
+
+    public int[] Rotate_Array(int[] nums, int k) {
+
+        //check k is 0
+        if(k == 0 || nums.length == 1) return nums;
+
+        // check rotation times using modulus
+        // to perform ONLY needed rotations
+        k %= nums.length;
+
+        //Rotation Algorithm will follow 3 steps
+        //Reverse entire array
+        reverse(nums,0,nums.length-1);
+        //Reverse first half (k)
+        reverse(nums, 0, k-1);
+        //Reverse second half (k)
+        reverse(nums, k, nums.length-1);
+
+        return nums;
+    }
+
+    private void reverse(int[] nums, int l, int r) {
+        while(l < r){
+            int temp = nums[l];
+            nums[l++] = nums[r];
+            nums[r--] = temp;
+        }
+    }
+
+    public Boolean Contains_Duplicate(int[] nums) {
+
+        //Hash-set method O(n) time
+        HashSet<Integer> lookUpTable = new HashSet<>();
+        for (int num : nums) {
+            //Add new integers to lookUpTable
+            if (!lookUpTable.contains(num))
+                lookUpTable.add(num);
+            else
+                return true;
+        }
+
+        return false;
+    }
+
+    public int Single_Number(int[] nums) {
+        /*****************
+         * This solution is O(n) time complexity
+         * and O(1) space complexity since no extra
+         * memory is allocated
+        int result = 0;
+        for(int num : nums)
+            result ^= num;
+        return result;
+         *****************/
+        //Create look up table with hash-set
+        Hashtable<Integer,Boolean> lookUpTable = new Hashtable<>();
+
+        for(int num : nums){
+            if(!lookUpTable.containsKey(num)){
+                lookUpTable.put(num, true);
+            }else {
+                lookUpTable.replace(num, false);
+            }
+        }
+
+        for (Map.Entry<Integer,Boolean> entry : lookUpTable.entrySet()) {
+            int key = entry.getKey();
+            Boolean value = entry.getValue();
+            if(value)
+                return key;
+        }
+
+        return 0;
+    }
+
 }
 
 public class Main {

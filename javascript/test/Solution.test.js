@@ -168,3 +168,26 @@ describe('TwoSum - Leetcode', () =>{
     })
 
 })
+
+
+describe('Leetcode Easy Collection - Remove Duplicates from Sorted Array', () =>{
+    test('Test 1 - Short Array', () =>{
+        
+        let solution = new Solution();
+        const nums = [1,1,2];
+        const result = 2;
+
+        expect(solution.Remove_Duplicates_from_Sorted_Array(nums)).toEqual(result);
+    })
+
+    test('Test 2 - Long array', () =>{
+        
+        let solution = new Solution();
+        const nums = [0,0,1,1,1,2,2,3,3,4];
+        const result = 5
+
+        expect(solution.Remove_Duplicates_from_Sorted_Array(nums)).toEqual(result);
+    })
+
+})
+

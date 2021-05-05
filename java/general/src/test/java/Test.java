@@ -135,7 +135,7 @@ public class Test {
     @org.junit.jupiter.api.DisplayName("stack.Stack Class - pop method")
     @org.junit.jupiter.api.Test
     public void stackTestPop() throws Exception {
-        Stack<Integer> stack = new Stack<Integer>();
+        Stack<Integer> stack = new Stack<>();
         stack.push(2);
         stack.push(4);
         stack.push(16);
@@ -148,7 +148,7 @@ public class Test {
     @org.junit.jupiter.api.DisplayName("stack.Stack Class - peek method")
     @org.junit.jupiter.api.Test
     public void stackTestPeek() throws Exception {
-        Stack<Integer> stack = new Stack<Integer>();
+        Stack<Integer> stack = new Stack<>();
         stack.push(2);
         stack.push(4);
         stack.push(16);
@@ -158,7 +158,7 @@ public class Test {
     @org.junit.jupiter.api.DisplayName("stack.Stack Class - isEmpty method")
     @org.junit.jupiter.api.Test
     public void stackTestIsEmpty(){
-        Stack<Integer> stack = new Stack<Integer>();
+        Stack<Integer> stack = new Stack<>();
         stack.push(2);
         stack.push(4);
         stack.push(16);
@@ -169,7 +169,7 @@ public class Test {
     @DisplayName("Queue Class - isEmpty method")
     @org.junit.jupiter.api.Test
     public void queueTestIsEmpty(){
-        Queue<Integer> queue = new Queue<Integer>();
+        Queue<Integer> queue = new Queue<>();
         queue.enqueue(2);
         queue.enqueue(4);
         queue.enqueue(16);
@@ -180,7 +180,7 @@ public class Test {
     @DisplayName("Queue Class - dequeue method")
     @org.junit.jupiter.api.Test
     public void queueTestDequeue() throws Exception {
-        Queue<Integer> queue = new Queue<Integer>();
+        Queue<Integer> queue = new Queue<>();
         queue.enqueue(2);
         queue.enqueue(4);
         queue.enqueue(16);
@@ -191,7 +191,7 @@ public class Test {
     @DisplayName("Queue Class - top method")
     @org.junit.jupiter.api.Test
     public void queueTestTop() throws Exception {
-        Queue<Integer> queue = new Queue<Integer>();
+        Queue<Integer> queue = new Queue<>();
         queue.enqueue(2);
         queue.enqueue(4);
         queue.enqueue(16);
@@ -199,9 +199,9 @@ public class Test {
         assertEquals(queue.top(), 2);
     }
 
-    @DisplayName("Two Sum - Case 1")
+    @DisplayName("Leetcode: Two Sum - Case 1")
     @org.junit.jupiter.api.Test
-    public void twoSum1() throws Exception {
+    public void twoSum1() {
         int[] nums = new int[]{2,11,7,15};
         int target = 9;
         int[] result = new int[]{0,2};
@@ -209,13 +209,107 @@ public class Test {
         assertArrayEquals(result, solution.twoSum(nums, target));
     }
 
-    @DisplayName("Two Sum - Case 2")
+    @DisplayName("Leetcode: Two Sum - Case 2")
     @org.junit.jupiter.api.Test
-    public void twoSum2() throws Exception {
+    public void twoSum2() {
         int[] nums = new int[]{3,2,4};
         int target = 6;
         int[] result = new int[]{1,2};
 
         assertArrayEquals(result, solution.twoSum(nums, target));
     }
+
+    @DisplayName("Leetcode: Is Palindrome - Case 1")
+    @org.junit.jupiter.api.Test
+    public void isPalindrome() {
+        String s = "A man, a plan, a canal: Panama";
+        assertTrue(solution.isPalindrome(s));
+    }
+
+    @DisplayName("Leetcode: Is Palindrome - Case 2")
+    @org.junit.jupiter.api.Test
+    public void isPalindromeNotPalindrome() {
+        String s = "race a car";
+        assertFalse(solution.isPalindrome(s));
+    }
+
+    @DisplayName("CodeSignal: Largest Number")
+    @org.junit.jupiter.api.Test
+    public void Largest_Number()
+    {
+
+    }
+    /* ***************************
+    * LEETCODE - EASY COLLECTION *
+    * */
+    @DisplayName("Remove Duplicates from Sorted Array")
+    @org.junit.jupiter.api.Test
+    public void  Remove_Duplicates_from_Sorted_Array()
+    {
+        int[] Input = new int[]{0,0,1,1,1,2,2,3,3,4};
+        int[] Output = new int[]{0,1,2,3,4};
+        assertEquals(Output.length, solution.Remove_Duplicates_from_Sorted_Array(Input));
+
+    }
+    @DisplayName("Remove Duplicates from Sorted Array(2)")
+    @org.junit.jupiter.api.Test
+    public void  Remove_Duplicates_from_Sorted_Array2()
+    {
+        int[] Input = new int[]{1,1,2};
+        int[] Output = new int[]{1,2};
+        assertEquals(Output.length, solution.Remove_Duplicates_from_Sorted_Array(Input));
+
+    }
+
+    @DisplayName("Best Time to Buy and Sell Stock II")
+    @org.junit.jupiter.api.Test
+    public void  Best_Time_to_Buy_and_Sell_Stock_II()
+    {
+        int[] prices = new int[]{7,1,5,3,6,4};
+        assertEquals(7, solution.Best_Time_to_Buy_and_Sell_Stock_II(prices));
+    }
+    @DisplayName("Best Time to Buy and Sell Stock II(2)")
+    @org.junit.jupiter.api.Test
+    public void  Best_Time_to_Buy_and_Sell_Stock_II2()
+    {
+        int[] prices = new int[]{1,2,3,4,5};
+        assertEquals(4, solution.Best_Time_to_Buy_and_Sell_Stock_II(prices));
+    }
+
+    @DisplayName("Rotate Array")
+    @org.junit.jupiter.api.Test
+    public void  Rotate_Array()
+    {
+        int[] nums = new int[]{1,2,3,4,5,6,7};
+        int k = 3;
+        int[] output = new int[]{5,6,7,1,2,3,4};
+        assertArrayEquals(output, solution.Rotate_Array(nums,k));
+    }
+
+    @DisplayName("Contains Duplicate")
+    @org.junit.jupiter.api.Test
+    public void  Contains_Duplicate()
+    {
+        int[] nums = new int[]{1,2,3,1};
+        Boolean output = true;
+        assertEquals(output, solution.Contains_Duplicate(nums));
+    }
+    @DisplayName("Contains Duplicate(2)")
+    @org.junit.jupiter.api.Test
+    public void  Contains_Duplicate2()
+    {
+        int[] nums = new int[]{1,2,3,4};
+        Boolean output = false;
+        assertEquals(output, solution.Contains_Duplicate(nums));
+    }
+
+    @DisplayName("Single Number")
+    @org.junit.jupiter.api.Test
+    public void Single_Number()
+    {
+        int[] nums = new int[]{4,4,2,2,1};
+        int output = 1;
+        assertEquals(output, solution.Single_Number(nums));
+    }
+
 }

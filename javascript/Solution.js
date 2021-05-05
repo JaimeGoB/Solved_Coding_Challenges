@@ -254,6 +254,21 @@ class Solution {
 
         return result;
     }
+
+    Remove_Duplicates_from_Sorted_Array(nums)
+    {
+        if(nums.length == 0) return 0;
+
+        //Start at first value from array
+        let result = 0;
+
+        for( let i = result+1; i < nums.length; i++){
+            if(nums[i] != nums[result])
+                nums[++result] = nums[i];
+        }
+
+        return ++result;
+    }
 }
 
 module.exports = Solution;
