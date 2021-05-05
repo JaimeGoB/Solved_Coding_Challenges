@@ -122,6 +122,26 @@ Only divisble by n and 1.
 * java
 * javascript
 
+# LeetCode Easy Collection
+## Remove Duplicates from Sorted Array
+Given a sorted array nums, remove the duplicates, such that each element appears only once and returns the new array without duplicates.
+
+**Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.**
+
+**Example**
+
+Input:  nums = [1,1,2]
+Output: nums = [1,2]
+
+Input:  nums = [0,0,1,1,1,2,2,3,3,4]
+Output: nums = [0,1,2,3,4]
+
+**Run Time Complexity** = O(n)
+**Space Time Complexity** = O(1)
+
+#### Solved
+* java
+* javascript
 
 
 
