@@ -231,3 +231,23 @@ describe('Leetcode Easy Collection - Rotate Array', () =>{
         expect(solution.Rotate_Array(nums,k)).toEqual(result);
     })
 })
+
+describe('Leetcode Easy Collection - Single Number', () =>{
+    test('Test 1 - 5 digit array', () =>{
+        
+        let solution = new Solution();
+        var nums = [4,1,2,1,2];
+        const result = 4;
+
+        expect(solution.Single_Number(nums)).toEqual(result);
+    })
+
+    test('Test 2 - Single digit array', () =>{
+        
+        let solution = new Solution();
+        var nums = [1];
+        const result = 1;
+
+        expect(solution.Single_Number(nums)).toEqual(result);
+    })
+})
