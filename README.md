@@ -199,3 +199,44 @@ rotate 2 steps to the right: [3,99,-1,-100]
 #### Solved
 * java
 * javascript
+
+## Contains Duplicate
+
+Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
+
+**Example**
+
+Input: nums = [1,2,3,1] Output: true
+
+Input: nums = [1,2,3,4] Output: false
+
+Input: nums = [1,1,1,3,3,4,3,2,4,2] Output: true
+
+**Run Time Complexity** = O(n)
+**Space Time Complexity** = O(n)
+
+#### Solved
+* java
+* javascript
+
+## Single Number
+
+Given a non-empty array of integers nums, every element appears twice except for one. Find that single one.
+
+In Linear runtime complexity and without using extra memory.
+
+**Examples**
+
+Input: nums = [2,2,1] Output: 1
+
+
+Input: nums = [4,1,2,1,2] Output: 4
+
+Input: nums = [1] Output: 1
+
+**Run Time Complexity** = O(n)
+**Space Time Complexity** = O(1)
+
+#### Solved
+* java
+* javascript
