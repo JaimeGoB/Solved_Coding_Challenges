@@ -275,10 +275,38 @@ class Solution {
         let profit = 0;
         //Buy and Sell immediately ONLY if the price goes up
         for(let i = 1; i < nums.length; i++)
-            profit = profit + Math.max(0,nums[i] - nums[i-1]);
+            profit += Math.max(0,nums[i] - nums[i-1]);
 
         return profit;
     }
+
+    reverse_arr(nums, l, r)
+    {
+        while(l < r){
+            let temp = nums[l];
+            nums[l++] = nums[r];
+            nums[r--] = temp; 
+        }
+    }
+
+    Rotate_Array(nums,k)
+    {
+        //Step 1 - Calculate exact rotations
+        let split = k % nums.length;   
+
+        //Step 2 - Check for split or k being 0
+        if(k == 0 || split == 0)
+            return nums;
+
+        //Step 3 - Reverse entire array, until k, until end
+        this.reverse_arr(nums, 0, nums.length-1);
+        this.reverse_arr(nums, 0, split-1);
+        this.reverse_arr(nums, split, nums.length-1);
+
+        return nums;
+    }
+
+
 }
 
 module.exports = Solution;

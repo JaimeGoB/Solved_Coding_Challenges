@@ -209,3 +209,25 @@ describe('Leetcode Easy Collection - Best Time to Buy and Sell Stock II', () =>{
         expect(solution.Best_Time_to_Buy_and_Sell_Stock_II(nums)).toEqual(result);
     })
 })
+
+describe('Leetcode Easy Collection - Rotate Array', () =>{
+    test('Test 1 - 3 rotations', () =>{
+        
+        let solution = new Solution();
+        var nums = [1,2,3,4,5,6,7];
+        const k = 3;
+        const result = [5,6,7,1,2,3,4];
+
+        expect(solution.Rotate_Array(nums,k)).toEqual(result);
+    })
+
+    test('Test 2 - 2 rotations', () =>{
+        
+        let solution = new Solution();
+        var nums = [-1,-100,3,99];
+        const k = 2;
+        const result = [3,99,-1,-100];
+
+        expect(solution.Rotate_Array(nums,k)).toEqual(result);
+    })
+})
